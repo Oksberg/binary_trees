@@ -16,15 +16,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (temp == NULL)
 		return (NULL);
 
-	if (parent == NULL)
-		temp->n = value;
-	else
-	{
-		temp->parent = parent;
-		temp->n = value;
-		temp->left = NULL;
-		temp->right = NULL;
-	}
+	temp->parent = parent;
+	temp->n = value;
+	temp->left = NULL;
+	temp->right = NULL;
 
 	return (temp);
 }
