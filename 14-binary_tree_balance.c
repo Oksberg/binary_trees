@@ -18,6 +18,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 		return (-1);
 	if (tree->left != NULL && tree->right == NULL)
 		return (1);
+	if (tree->left == NULL && tree->right == NULL)
+		return (0);
 
 	left_balance = binary_tree_balance(tree->left);
 	right_balance = binary_tree_balance(tree->right);
